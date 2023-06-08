@@ -1,13 +1,13 @@
 version: "2.1"
 services:
-  mikhmon:
+  extraordinary-cbt:
     image: animegasan/extraordinary-cbt:latest
     container_name: extraordinary-cbt
     ports:
       - 8080:80
     environment:
-      MYSQL_DATABASE:
-      MYSQL_USER:
-      MYSQL_PASSWORD:
-      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
     restart: unless-stopped
