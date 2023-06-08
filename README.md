@@ -37,11 +37,16 @@ Here are some example snippets to help you get started creating a container.
 ---
 version: "2.1"
 services:
-  mikhmon:
+  extraordinary-cbt:
     image: animegasan/extraordinary-cbt:latest
     container_name: extraordinary-cbt
     ports:
       - 8080:80
+    environment:
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
     restart: unless-stopped
 ```
 ### docker cli
@@ -50,6 +55,10 @@ services:
 docker run -d \
   --name=extraordinary-cbt \
   -p 8080:80 \
+  -e MYSQL_DATABASE=database \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=password \
+  -e MYSQL_ROOT_PASSWORD=password \
   --restart unless-stopped \
   animegasan/extraordinary-cbt:latest
 ```
