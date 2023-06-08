@@ -52,5 +52,11 @@ EOF
   #rm -f $tfile
 fi
 
+exec /usr/bin/mysqld --user=root --console & while ! mysqladmin ping --silent; do sleep 1; echo "wait 1 second"; done
 
-exec /usr/bin/mysqld --user=root --console
+if [ "$MYSQL_DATABASE" != "" ]; then
+  echo "[i] Import database: $MYSQL_DATABASE" from dump-mysql
+  mysql ${MYSQL_DATABASE} < /app/dump-mysql.sql
+  rm /app/dump-mysql.sql
+  echo "[i] Import database complete"
+fi
