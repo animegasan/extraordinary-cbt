@@ -13,7 +13,7 @@
 
 Extraordinary CBT is a web-based application for exam management that can be run online or locally, hosting or VPS.
 
-The image build on <a href="http://www.alpinelinux.org" target="_blank">Alpine Linux</a> and Extraordinary CBT from <a href="https://github.com/shellrean-dev/exo-cbt-client" target="_blank">Dhellrean</a>.
+The image build on <a href="http://www.alpinelinux.org" target="_blank">Alpine Linux</a> and Extraordinary CBT from <a href="https://github.com/shellrean-dev/exo-cbt-client" target="_blank">Shellrean</a>.
 
 ---
 
