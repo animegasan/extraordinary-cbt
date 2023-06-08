@@ -49,7 +49,7 @@ EOF
   fi
 
   /usr/bin/mysqld --user=root --bootstrap --verbose=0 < $tfile
-  #rm -f $tfile
+  rm -f $tfile
 fi
 
 exec /usr/bin/mysqld --user=root --console & while ! mysqladmin ping --silent; do sleep 1; echo "wait 1 second"; done
